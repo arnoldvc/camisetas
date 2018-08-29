@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tu remera</title>
+</head>
+<body>
+<table>
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Descripcion</th>
+			<th>Precio</th>
+			<th>Cantidad</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% todos = Producto.all %>
+		<% todos.each do |producto| %>
+		<tr>
+			<td><%= producto.nombre %></td>
+			<td><%= producto.descripcion %></td>
+			<td><%= producto.precio %></td>
+			<td><%= producto.cantidad %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+</body>
+</html>
