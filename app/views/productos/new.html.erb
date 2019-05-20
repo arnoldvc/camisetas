@@ -1,0 +1,31 @@
+<% @producto.errors.full_messages.each do |message| %>
+	<div class="alert alert-danger" role="alert"><%= message %></div>
+<% end %>
+
+<%= form_for @producto do |f| %>
+
+<div class="form-group">
+	<%= f.label :nombre %>
+	<%= f.text_field :nombre, class: "form-control" %>
+</div>
+
+<div class="form-group">
+	<%= f.label :descripcion %>
+	<%= f.text_area :descripcion, class: "form-control", rows: 4 %>
+</div>
+
+<div class="form-inline">
+	<div class="form-group">
+		<%= f.label :cantidad %>
+		<%= f.number_field :cantidad, step: 1, class: "form-control" %>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :precio %>
+		<%= f.number_field :precio, class: "form-control"%>
+	</div>
+
+	<%= f.submit "Crear Producto", class: "btn btn-primary" %>
+
+</div>
+<% end %>
