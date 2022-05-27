@@ -105,7 +105,7 @@ GEM
     nokogiri (1.11.7-x86-mingw32)
       racc (~> 1.4)
     racc (1.5.2)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.4.6)
